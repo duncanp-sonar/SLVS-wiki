@@ -32,10 +32,7 @@ You will benefit from the following code analyzers: [SonarC#](https://redirect.s
 
 For C#, VB.NET and C/C++ the only thing you need to install is the VSIX.
 
-### Enabling JavaScript analysis
-JavaScript analysis requires some additional binaries to be downloaded as a one-time operation. To enable JavaScript analysis, select `Tools`, `Options`, `SonarLint` and click on the "Activate" button then clicking "OK". The additional files will be downloaded in the background, which the download progress being shown in the Visual Studio status bar.
-
-Once the download has completed, JavaScript files will be analysed whenever you save them.
+To enables support for JavaScript analysis, see [Support for Additional Languages](https://github.com/SonarSource/sonarlint-visualstudio/wiki/Support-for-Additional-Languages)
 
 ### Standalone mode
 By default SonarLint runs in standalone mode i.e. completely independently of SonarQube/SonarCloud.
