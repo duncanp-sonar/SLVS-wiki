@@ -8,7 +8,7 @@ To enable analysis of additional languages, select Tools, Options, SonarLint and
 
 Once the download has completed, JavaScript files will be analysed whenever you save them.
 
-### Specifying the location from which the additional binaries should be downloaded (SLVS v4.11 or later)
+### Specifying an alternative download location (SLVS v4.11 or later)
 By default the additional binaries will be downloaded from a public site. If you are working in an environment in which developer machines do not have access to the public internet, you can host the required binaries yourself and set the environment variable `SONARLINT_DAEMON_DOWNLOAD_URL` to tell SLVS where to find the binaries. 
 
 There are few restrictions:
