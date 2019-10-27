@@ -37,10 +37,16 @@ To enables support for JavaScript analysis, see [Support for Additional Language
 ### Standalone mode
 By default SonarLint runs in standalone mode i.e. completely independently of SonarQube/SonarCloud.
 
-#### Choosing which C#/VB.NET rules to run in Standalone
+#### Choosing which C#/VB.NET rules to run in Standalone mode
 Note: configuring which C++ or JavaScript rules run is not currently supported.
 
 The SonarC# and SonarVB rules are implemented as [Roslyn VSIX analyzers](https://docs.microsoft.com/en-us/visualstudio/code-quality/install-roslyn-analyzers?view=vs-2019), and you can configure which rules are executed using the normal [ruleset](https://docs.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2019#rule-sets) mechanism in VS.
+
+#### Choosing which C/C++ rules to run in Standalone mode
+See [Choosing which C/C++ rules to run in Standalone mode](https://github.com/SonarSource/sonarlint-visualstudio/wiki/Choosing-which-C-C---rules-to-run-in-Standalone-mode).
+
+#### Choosing which JavaScript rules to run in Standalone mode
+It is not currently possible to configure which Javascript are run.
 
 
 ### Connected mode
