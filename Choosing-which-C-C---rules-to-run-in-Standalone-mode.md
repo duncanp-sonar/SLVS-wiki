@@ -1,0 +1,42 @@
+Starting with version 4.13, it is possible to configure which C/C++ rules are executed.
+
+## Disabling a rule
+To disable a rule, select an instance of the rule in the Error List and click the `Disable SonarLint rule` command on the context menu:
+
+![The "Disable SonarLint rule" command is on the Error List context menu](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/SLVS_ErrorList_DisableCFamily_v4_13.png)
+
+You can view and change the current rule settings by clicking the "Edit rules settings" on the SonarLint `Tools`, `Options` page:
+
+![The "Edit rules settings" button is on the SonarLint Tools Option page.](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/SLVS_ToolsOptions_Edit_Rules_v4_13.png)
+
+When the rule settings are changed (either by using the `Disable SonarLint rule` command or by directly editing and saving the settings.json file), SonarLint will automatically re-analyse all open documents.
+
+The SonarLint Output window tab contains text output describing the processing that has taken place e.g.:
+
+![SonarLint output window example text describing re-analysis of open documents](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/SLVS_ReanalysisOutputWindow_v4_13.png)
+
+### settings.json file format and location
+The `settings.json` file is stored in user's roaming profile `%APPDATA%\SonarLint for Visual Studio`. It applies to all supported versions of Visual Studio. If the machine is domain-joined, then the settings file will be automatically copied to any other machine in the domain that the user logs on to.
+
+The format of the settings file is as follows:
+```
+{
+  "sonarlint.rules": {
+    "c:S3229": {
+      "Level": "On"
+    },
+    "cpp:S1199": {
+      "Level": "Off"
+    },
+    "cpp:LiteralSuffix": {
+      "Level": "Off"
+    }
+  }
+}
+```
+
+The settings file can be used to enable or disable specific C/C++ rules. Currently it cannot be used to enable/disable rules for any other languages, or to change the settings for parameterized rules.
+
+The format of the rule key in the file is `[c|cpp]:[rule id]`. The full list of rules is available at https://rules.sonarsource.com/.
+
+If the settings file does not contain an entry for a rule then the default setting for the rule in the SonarWay Quality Profile will be used.
