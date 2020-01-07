@@ -50,14 +50,9 @@ It is not currently possible to configure which Javascript are run.
 
 
 ### Connected mode
+In connected mode, the solution is linked to a project in SonarQube/SonarCloud. See [Connected Mode](https://github.com/SonarSource/sonarlint-visualstudio/wiki/Connected-Mode) for more information.
 
-Note: Connected mode is currently only supported for C# and VB.NET projects.
-
-You can connect SonarLint to SonarQube >= 6.7 or SonarCloud to benefit from the same rules and settings that are used to inspect your project on the server. SonarLint then hides in VS the issues that are marked as **Won’t Fix** or **False Positive**.
-
-To configure the connection, have a look at SonarQube tab in the Team Explorer.
-
-SonarLint will periodically check whether the quality profile on the server has changed and ask you whether you want to update the local configuration to match. Alternatively, you can manually trigger a refresh from the SonarQube tab in the Team Explorer window.
+Note: Connected mode is currently only supported for C#, VB.NET, and C++ projects.
 
 ## Contributions
 
