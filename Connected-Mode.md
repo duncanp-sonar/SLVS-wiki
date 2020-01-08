@@ -1,12 +1,6 @@
 # Overview
 You can connect SonarLint to SonarQube >= 6.7 or SonarCloud to benefit from the same rules and settings that are used to inspect your project on the server. SonarLint then hides in VS the issues that are marked as **Won’t Fix** or **False Positive**.
 
-When a connected solution is opened in Visual Studio, SonarLint will check whether the quality profile on the server has changed and ask you whether you want to update the local configuration to match:
-
-![Out of date project configuration warning message](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki//ConnectedMode/CM_OutOfDateConfig_v4_14.png)
-
-Alternatively, you can manually trigger a refresh from the SonarQube tab in the Team Explorer window.
-
 ## Supported project types
 The following Visual Studio project types are supported: C# (.csproj), VB.NET (.vbproj), and C++ (*.vxcproj).
 CMake projects are not supported.
@@ -29,7 +23,7 @@ This will display the SonarQube Connections tab:
 The SonarQube tab is used for connecting to both SonarQube and SonarCloud. To connect to SonarCloud you should enter `https://sonarcloud.io` as the SonarQube server URL.
 
 #### Step (3) Select the server and enter your credentials
-You can connect using either user name and password, or a User Token.
+You can connect using either a User Token, or a user name and password. We strongly recommend using User Tokens.
 The documentation on creating User Tokens is here: 
 [SonarQube](https://docs.sonarqube.org/latest/user-guide/user-token/) ; [SonarCloud](https://sonarcloud.io/documentation/user-guide/user-token/)
 
@@ -59,5 +53,16 @@ SonarLint will then fetch the required settings from the server and create local
 ### Connected Mode configuration files
 TODO
 
-## Removing a solution from Connected Mode
+# Updating the local configuration files
+The local Connected Mode configuration files can get out of step with settings on the SonarQube server/SonarCloud e.g. if the Quality Profile for the project is changed on the server.
+
+SonarLint will automatically check whether the server configuration has changed whenever the bound solution is opened in Visual Studio and will ask you whether you want to update the local configuration to match:
+
+![Out of date project configuration warning message](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki//ConnectedMode/CM_OutOfDateConfig_v4_14.png)
+
+Alternatively, you can manually trigger an update from a context menu from the SonarQube tab in the Team Explorer window:
+
+![Connected mode update settings context menu](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki//ConnectedMode/CM_RefreshBinding_v4_14.png)
+
+# Removing a solution from Connected Mode
 There is not an "unbind" command to disconnect a solution from SonarQube/SonarCloud. Instead, simply delete the `.sonarlint` folder and its contents.
