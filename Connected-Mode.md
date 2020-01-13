@@ -8,7 +8,7 @@ CMake projects are not supported.
 _Note: support for *.vcxproj files was added in v4.15._
 
 # Setting up connected mode
-#### Step (1) Open the Team Explorer Home tabe and click on the SonarQube icon
+#### Step (1) Open the Team Explorer Home tab and click on the SonarQube icon
 
 ![Team Explorer home page showing SonarQube icon](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/ConnectedMode/CM_TeamExplorerHomePage_v4_14.png)
 
