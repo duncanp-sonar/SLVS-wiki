@@ -3,17 +3,17 @@ Starting with version 4.13, it is possible to configure which C/C++ rules are ex
 ## Disabling a rule
 To disable a rule, select an instance of the rule in the Error List and click the `Disable SonarLint rule` command on the context menu:
 
-![The "Disable SonarLint rule" command is on the Error List context menu](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/SLVS_ErrorList_DisableCFamily_v4_13.png)
+[[images/SLVS_ErrorList_DisableCFamily_v4_13.png|alt=Disable SonarLint rule menu command]]
 
 You can view and change the current rule settings by clicking the "Edit rules settings" on the SonarLint `Tools`, `Options` page:
 
-![The "Edit rules settings" button is on the SonarLint Tools Option page.](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/SLVS_ToolsOptions_Edit_Rules_v4_13.png)
+[[images/SLVS_ToolsOptions_Edit_Rules_v4_13.png|alt=Edit rules settings button on the SonarLint Tools Option page.]]
 
 When the rule settings are changed (either by using the `Disable SonarLint rule` command or by directly editing and saving the settings.json file), SonarLint will automatically re-analyse all open documents.
 
 The SonarLint Output window tab contains text output describing the processing that has taken place e.g.:
 
-![SonarLint output window example text describing re-analysis of open documents](https://github.com/SonarSource/sonarlint-visualstudio/blob/master/docs/wiki/SLVS_ReanalysisOutputWindow_v4_13.png)
+[[images/SLVS_ReanalysisOutputWindow_v4_13.png|alt=SonarLint output window example text]]
 
 ### settings.json file format and location
 The `settings.json` file is stored in user's roaming profile `%APPDATA%\SonarLint for Visual Studio`. It applies to all supported versions of Visual Studio. If the machine is domain-joined, then the settings file will be automatically copied to any other machine in the domain that the user logs on to.
